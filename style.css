@@ -1,0 +1,267 @@
+/* Fuente general */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Sección principal */
+.inicio {
+    height: 100vh;
+    width: 100%;
+    background: url('https://images.unsplash.com/photo-1526401485004-2aa7d6b07f15?auto=format&fit=crop&w=1600&q=80')
+                center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* oscurece la imagen para mejor contraste */
+    background-color: rgba(0, 0, 0, 0.55);
+    background-blend-mode: darken;
+}
+
+.contenido h3 {
+    font-size: 20px;
+    color: #ffffffc0;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.contenido h1 {
+    font-size: 55px;
+    font-weight: 600;
+    color: white;
+    margin-top: 0;
+    max-width: 500px;
+    line-height: 1.1;
+}
+
+/* BOTÓN estilo UTN */
+.contenido button {
+    margin-top: 25px;
+    background: white;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+    transition: 0.3s;
+}
+
+.contenido button:hover {
+    background: #e8e8e8;
+}
+
+/* Fuente general */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    z-index: 100;
+    padding: 0 20px; /* <--- separa el navbar de los bordes */
+}
+
+/* Logo */
+
+.nav-logo img {
+    height: 48px;
+}
+
+/* Menú */
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    transition: 0.2s;
+}
+
+.nav-menu a:hover {
+    color: #000;
+    font-weight: 500;
+}
+
+/* Contenedor central */
+.nav-container {
+    width: 100%;
+    max-width: 1400px;   /* ajusta esto si querés más o menos ancho */
+    margin: 0 auto;      /* centra horizontalmente */
+    padding: 0 40px;     /* espacio a los lados */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* PORTADA */
+.inicio {
+    height: 100vh;
+    width: 100%;
+    background: url('https://images.unsplash.com/photo-1526401485004-2aa7d6b07f15?auto=format&fit=crop&w=1600&q=80')
+                center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.55);
+    background-blend-mode: darken;
+}
+
+.contenido h3 {
+    font-size: 20px;
+    color: #ffffffc0;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.contenido h1 {
+    font-size: 55px;
+    font-weight: 600;
+    color: white;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Botón principal */
+.contenido button {
+    margin-top: 25px;
+    background: white;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+    transition: 0.3s;
+}
+
+.contenido button:hover {
+    background: #e8e8e8;
+}
+
+/*titulo diplomatura*/
+.titulo-diplomatura {
+    width: 100%;
+    padding: 120px 20px 50px; /* espacio para que no tape el navbar */
+    text-align: center;
+    background: white;
+}
+
+.titulo-diplomatura h1 {
+    font-size: 42px;
+    font-weight: 600; /* Poppins fuerte */
+    color: #1d1d1d;
+    margin-bottom: 10px;
+}
+
+.titulo-diplomatura p{
+    font-size: 18px;
+    color: #555;
+    font-weight: 300;
+    margin: 0;
+    text-align: justify;
+}
+
+/* PRESENTACIÓN */
+.presentacion {
+    width: 100%;
+    background: #ffffff;
+    padding: 40px 20px 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.presentacion-contenedor {
+    max-width: 900px;
+    text-align: left;
+}
+
+.presentacion h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1d1d1d;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.presentacion p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+/* SECCIÓN MODALIDAD */
+.modalidad {
+    padding: 100px 60px;
+    text-align: center;
+    background: #ffffff;
+}
+
+.modalidad h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: #222;
+}
+
+/* Contenedor de tarjetas */
+.mod-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas */
+.mod-card {
+    background: #fff;
+    width: 300px;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.10);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.mod-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 25px rgba(0,0,0,0.15);
+}
+
+.mod-card h3 {
+    font-size: 22px;
+    color: #0052cc;
+    margin-bottom: 15px;
+}
+
+.mod-card p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
