@@ -82,7 +82,7 @@ body, html {
 /* Logo */
 
 .nav-logo img {
-    height: 48px;
+    height: 65px;
 }
 
 /* Menú */
@@ -187,34 +187,59 @@ body, html {
 }
 
 /* PRESENTACIÓN */
-.presentacion {
-    width: 100%;
+/* FUNDAMENTACIÓN */
+.fundamentacion {
+    padding: 70px 20px;
     background: #ffffff;
-    padding: 40px 20px 70px;
     display: flex;
     justify-content: center;
 }
 
-.presentacion-contenedor {
+.fundamentacion-contenedor {
     max-width: 900px;
-    text-align: left;
 }
 
-.presentacion h2 {
+.fundamentacion h2 {
     font-size: 32px;
     font-weight: 600;
-    color: #1d1d1d;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: center;
 }
 
-.presentacion p {
+.fundamentacion p {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 18px;
+}
+
+.institucional {
+    padding: 80px 20px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.institucional-contenedor {
+    max-width: 900px;
+    text-align: center;
+}
+
+.institucional h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #1d1d1d;
+}
+
+.institucional p {
     font-size: 18px;
     line-height: 1.7;
     color: #444;
     margin-bottom: 18px;
-    text-align: justify;
 }
+
+
 
 /* SECCIÓN MODALIDAD */
 .modalidad {
@@ -264,4 +289,609 @@ body, html {
     font-size: 16px;
     color: #444;
     line-height: 1.6;
+}
+/* SECCIÓN OBJETIVOS */
+.objetivos {
+    padding: 70px 60px;
+    background: #f7f9fc;
+    text-align: center;
+}
+
+.objetivos h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: #222;
+}
+
+/* Contenedor de tarjetas */
+.obj-container {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas */
+.obj-card {
+    width: 280px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.obj-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 22px rgba(0,0,0,0.15);
+}
+
+.obj-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0052cc;
+    margin-bottom: 10px;
+}
+
+.obj-card p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* MARCO METODOLÓGICO */
+.marco-metodologico {
+    padding: 80px 60px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.marco-metodologico h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.marco-intro {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Contenedor de ejes */
+.ejes-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Cards de ejes */
+.eje-card {
+    background: #ffffff;
+    width: 320px;
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.10);
+    transition: 0.3s;
+    text-align: left;
+}
+
+.eje-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 6px 25px rgba(0,0,0,0.15);
+}
+
+.eje-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0052cc;
+    margin-bottom: 5px;
+}
+
+.eje-card h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1d1d1d;
+    margin-bottom: 15px;
+}
+
+.eje-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* DESTINATARIOS - CUADRO */
+.destinatarios-cuadro {
+    padding: 80px 20px;
+    background: #f7f9fc;
+    display: flex;
+    justify-content: center;
+}
+
+.dest-cuadro {
+    max-width: 900px;
+    background: #ffffff;
+    padding: 50px 60px;
+    border-radius: 18px;
+    box-shadow: 0px 6px 25px rgba(0,0,0,0.12);
+    text-align: justify;
+}
+
+.dest-cuadro h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #1d1d1d;
+}
+
+.dest-cuadro p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+
+
+/*programa */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f5f6fa;
+}
+
+.container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+
+/* --- Estilo del acordeón --- */
+.modulo {
+    background: white;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.modulo:hover {
+    background: #f0f4ff;
+}
+
+.titulo-modulo {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenido-modulo {
+    margin-top: 10px;
+    display: none; /* Lo abrimos con JS */
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.icono {
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.abierto .icono {
+    transform: rotate(90deg);
+}
+
+/* SECCIÓN EVALUACIÓN */
+.evaluacion {
+    margin-top: 80px;
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+.evaluacion h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+/* Contenedor */
+.eval-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* Tarjetas */
+.eval-card {
+    background: #f7f9fc;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.eval-card h3 {
+    font-size: 20px;
+    color: #0052cc;
+    margin-bottom: 12px;
+}
+
+.eval-card p,
+.eval-card ul {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.eval-card ul {
+    padding-left: 18px;
+}
+
+.eval-card ul li {
+    margin-bottom: 8px;
+}
+
+/* Tarjeta destacada */
+.eval-card.destacado {
+    background: #0052cc;
+    color: white;
+}
+
+.eval-card.destacado h3 {
+    color: white;
+}
+
+.eval-card.destacado p {
+    color: white;
+}
+/* La tarjeta destacada ocupa toda la fila */
+.eval-card.destacado {
+    grid-column: 1 / -1; /* ocupa todas las columnas */
+    padding: 35px;
+    font-size: 16px;
+}
+
+.bibliografia {
+    max-width: 1000px;
+    margin: 60px auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.biblio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: #f5f7fa;
+    padding: 20px 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.biblio-header h2 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.biblio-header span {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.biblio-content {
+    display: none;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    background: white;
+}
+
+.biblio-content ol {
+    padding-left: 20px;
+}
+
+.biblio-content li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* MODALIDAD DE DICTADO */
+.modalidad {
+    margin: 80px auto;
+    padding: 0 20px;
+    max-width: 1100px;
+}
+
+.modalidad h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+/* Grid */
+.modalidad-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* Cards */
+.modalidad-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.modalidad-card h3 {
+    color: #0052cc;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.modalidad-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Card destacada */
+.modalidad-card.destacado {
+    grid-column: 1 / -1;
+    background: #f5f7fa;
+    border-left: 6px solid #0052cc;
+}
+.modalidad-card.destacado {
+    grid-column: 1 / -1;
+    background: #f5f7fa;
+    border-left: 6px solid #0052cc;
+}
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sección */
+.docentes {
+    max-width: 1100px;
+    margin: 120px auto 60px auto;
+    padding: 0 20px;
+}
+
+.docentes h1 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+
+/* Card docente */
+.docente-card {
+    display: flex;
+    align-items: stretch;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    overflow: hidden; /* pega foto y texto */
+}
+
+/* Foto */
+.docente-foto {
+    width: 180px;
+    flex-shrink: 0;
+    background: #eaeaea;
+}
+
+.docente-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Info */
+.docente-info {
+    padding: 25px;
+}
+
+.docente-info h2 {
+    font-size: 22px;
+    color: #0052cc;
+    margin-bottom: 10px;
+}
+
+.docente-info p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .docente-card {
+        flex-direction: column;
+    }
+
+    .docente-foto {
+        width: 100%;
+        height: 220px;
+    }
+}
+
+/* INSCRIPCIÓN */
+.inscripcion {
+    width: 100%;
+    padding: 140px 20px 80px; /* espacio por navbar */
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.inscripcion-contenedor {
+    max-width: 800px;
+    text-align: center;
+}
+
+.inscripcion h1 {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1d1d1d;
+}
+
+.inscripcion-texto {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 35px;
+    text-align: justify;
+}
+
+.btn-inscripcion {
+    display: inline-block;
+    background: #0052cc;
+    color: white;
+    padding: 16px 36px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-inscripcion:hover {
+    background: #333;
+}
+
+.info-extra {
+    margin-top: 40px;
+    font-size: 16px;
+    color: #555;
+}
+
+.info-extra p {
+    margin: 6px 0;
+}
+
+/* CONTACTO */
+.contacto {
+    width: 100%;
+    padding: 140px 20px 80px;
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.contacto-contenedor {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contacto h1 {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1d1d1d;
+}
+
+.contacto-texto {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.contacto-mails p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contacto-mails a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contacto-mails a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+    background: #0f172a;
+    color: #e5e7eb;
+    padding: 60px 20px 30px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-col img {
+    height: 60px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-col p {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #cbd5f5;
+}
+
+.footer-col a {
+    color: #cbd5f5;
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #cbd5f5;
 }
