@@ -9,17 +9,37 @@ body, html {
 .inicio {
     height: 100vh;
     width: 100%;
-    background: url('https://images.unsplash.com/photo-1526401485004-2aa7d6b07f15?auto=format&fit=crop&w=1600&q=80')
-                center/cover no-repeat;
+    background-image: url("img/portadainicio.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    min-height: 100svh;
 
     /* oscurece la imagen para mejor contraste */
     background-color: rgba(0, 0, 0, 0.55);
     background-blend-mode: darken;
 }
+.logo-portada {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 160px;
+    max-width: 40vw;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .logo-portada {
+        width: 120px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
 
 .contenido h3 {
     font-size: 20px;
@@ -55,6 +75,8 @@ body, html {
 .contenido button:hover {
     background: #e8e8e8;
 }
+
+
 
 /* Fuente general */
 body, html {
@@ -148,7 +170,7 @@ body, html {
 }
 
 /* PORTADA */
-.inicio {
+/*.inicio {
     height: 100vh;
     width: 100%;
     background: url('https://images.unsplash.com/photo-1526401485004-2aa7d6b07f15?auto=format&fit=crop&w=1600&q=80')
@@ -175,7 +197,7 @@ body, html {
     color: white;
     max-width: 500px;
     margin: 0 auto;
-}
+}*/
 
 /* Botón principal */
 .contenido button {
