@@ -233,7 +233,19 @@ body, html {
     padding: 120px 20px 50px; /* espacio para que no tape el navbar */
     text-align: center;
     background: white;
+        /* IMAGEN DE FONDO */
+    background-image: url("img/tituloinicio.png"); /* o la imagen que quieras */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* OSCURECER LA IMAGEN */
+    background-color: rgba(0, 0, 0, 0.55);
+    background-blend-mode: darken;
+
+    padding: 120px 20px 60px; /* deja espacio por el navbar */
 }
+
 
 .titulo-diplomatura h1 {
     font-size: 42px;
@@ -277,6 +289,49 @@ body, html {
     margin-bottom: 18px;
 }
 
+.fundamentacion {
+    position: relative;
+    overflow: hidden;
+}
+
+.fundamentacion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 50%;
+    height: 100%;
+
+    background-image: url("img/circulodedeming.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    opacity: 0.2; /* más visible pero elegante */
+    z-index: 1;
+}
+
+.fundamentacion-contenedor {
+    position: relative;
+    z-index: 2;
+}
+@media (max-width: 768px) {
+    .fundamentacion::before {
+        width: 100%;
+        height: 100%;
+        right: 0;
+        opacity: 0.2;
+        background-position: center;
+        background-size: contain;
+    }
+
+    .fundamentacion-contenedor {
+        max-width: 100%;
+    }
+}
+
+
 .institucional {
     padding: 80px 20px;
     background: #ffffff;
@@ -303,6 +358,8 @@ body, html {
     margin-bottom: 18px;
 }
 
+
+
 /* SECCIÓN MODALIDAD */
 
 .modalidad-inicio {
@@ -328,6 +385,7 @@ body, html {
     gap: 40px;
     flex-wrap: wrap;
 }
+
 
 /* Tarjetas */
 .mod-card {
@@ -356,6 +414,22 @@ body, html {
     color: #444;
     line-height: 1.6;
 }
+
+.mod-card i {
+    font-size: 42px;          /* tamaño del ícono */
+    color: #0056d2;           /* azul (ajustalo si usás otro) */
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.mod-card i {
+    transition: transform 0.3s ease;
+}
+
+.mod-card:hover i {
+    transform: translateY(-5px);
+}
+
 /* SECCIÓN OBJETIVOS */
 .objetivos {
     padding: 70px 60px;
@@ -406,6 +480,26 @@ body, html {
     color: #444;
     line-height: 1.6;
 }
+
+.obj-card {
+    text-align: center;
+}
+
+.obj-card i {
+    font-size: 40px;
+    color: #0056d2;       /* mismo azul institucional */
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.obj-card i {
+    transition: transform 0.3s ease;
+}
+
+.obj-card:hover i {
+    transform: scale(1.1);
+}
+
 
 /* MARCO METODOLÓGICO */
 .marco-metodologico {
@@ -472,6 +566,7 @@ body, html {
     line-height: 1.7;
     color: #444;
 }
+
 
 /* DESTINATARIOS - CUADRO */
 .destinatarios-cuadro {
@@ -770,12 +865,15 @@ h1 {
     width: 180px;
     flex-shrink: 0;
     background: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .docente-foto img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain
 }
 
 /* Info */
@@ -804,7 +902,7 @@ h1 {
 
     .docente-foto {
         width: 100%;
-        height: 220px;
+        height: 260px;
     }
 }
 
