@@ -754,7 +754,7 @@ h1 {
 }
 
 .modulo-4 {
-    background-image: url("");
+    background-image: url("img/modulo4.png");
 }
 
 .modulo-5 {
@@ -773,7 +773,37 @@ h1 {
     background-image: url("img/modulo7.png");
 }
 
+.modulo-8 {
+    background-image: url("img/modulo8.png");
+}
 
+.modulo-9 {
+    background-image: url("img/modulo9.png");
+}
+
+.modulo-10A {
+    background-image: url("img/modulo10A.png");
+}
+
+.modulo-10B {
+    background-image: url("img/modulo10B.png");
+}
+
+.modulo-11 {
+    background-image: url("img/modulo11.png");
+}
+
+.modulo-12 {
+    background-image: url("img/modulo12.png");
+}
+
+.modulo-13 {
+    background-image: url("img/modulo13.png");
+}
+
+.modulo-14 {
+    background-image: url("img/modulo14.png");
+}
 .modulo-img {
     position: relative;
 }
