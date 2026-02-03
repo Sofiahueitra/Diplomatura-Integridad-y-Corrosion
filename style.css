@@ -221,8 +221,7 @@ body, html {
 .objetivos,
 .destinatarios-cuadro,
 .marco-metodologico,
-.presentacion,
-.titulo-diplomatura {
+.presentacion {
     background: #ffffff !important;
 }
 
@@ -233,15 +232,6 @@ body, html {
     padding: 120px 20px 50px; /* espacio para que no tape el navbar */
     text-align: center;
     background: white;
-        /* IMAGEN DE FONDO */
-    background-image: url("img/tituloinicio.png"); /* o la imagen que quieras */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    /* OSCURECER LA IMAGEN */
-    background-color: rgba(0, 0, 0, 0.55);
-    background-blend-mode: darken;
 
     padding: 120px 20px 60px; /* deja espacio por el navbar */
 }
@@ -261,6 +251,47 @@ body, html {
     margin: 0;
     text-align: justify;
 }
+
+.titulo-diplomatura {
+
+    
+    min-height: 400px; 
+    padding: 160px 20px 120px;  
+    position: relative;
+    overflow: hidden;
+
+    background-image: url("img/modulo6A.jpg"); /* 👈 tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* capa sutil para contraste */
+.titulo-diplomatura::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.75); /* 👈 claro, académico */
+    z-index: 1;
+}
+
+/* texto por arriba de la imagen */
+.titulo-diplomatura h1,
+.titulo-diplomatura p {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .titulo-diplomatura {
+        background-position: right center;
+    }
+
+    .titulo-diplomatura::before {
+        background: rgba(255, 255, 255, 0.85);
+    }
+}
+
 
 /* PRESENTACIÓN */
 /* FUNDAMENTACIÓN */
@@ -340,8 +371,69 @@ body, html {
 
 .institucional-contenedor {
     max-width: 900px;
+    background: #ffffff;
+    padding: 60px 70px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 30px rgba(0,0,0,0.08);
     text-align: center;
+    position: relative;
 }
+.institucional-contenedor {
+    position: relative;
+    overflow: hidden; /* CLAVE para que no se salga la animación */
+}
+
+/* Línea superior animada */
+.institucional-contenedor::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40%;
+    width: 40%;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #0052cc,
+        transparent
+    );
+    animation: linea-move 6s linear infinite;
+}
+
+/* Línea inferior animada */
+.institucional-contenedor::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: 40%;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #0052cc,
+        transparent
+    );
+    animation: linea-move-invertida 6s linear infinite;
+}
+@keyframes linea-move {
+    0% {
+        left: -40%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes linea-move-invertida {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -40%;
+    }
+}
+
 
 .institucional h2 {
     font-size: 36px;
@@ -673,6 +765,7 @@ body, html {
 
 
 
+
 /*programa */
 body {
     margin: 0;
@@ -882,7 +975,7 @@ h1 {
 
 .bibliografia {
     max-width: 1000px;
-    margin: 60px auto;
+    margin: 5px auto;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -976,6 +1069,79 @@ h1 {
     background: #f5f7fa;
     border-left: 6px solid #0052cc;
 }
+
+.cronograma {
+    padding: 50px 10px;
+}
+
+.cronograma h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.mes {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    background: white;
+    padding: 30px 35px;
+    border-radius: 16px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.1);
+}
+
+.mes h3 {
+    font-size: 26px;
+    color: #0052cc;
+    margin-bottom: 20px;
+}
+
+.mes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mes li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+}
+
+.mes li:last-child {
+    border-bottom: none;
+}
+
+.mes span {
+    display: inline-block;
+    width: 90px;
+    font-weight: 600;
+    color: #333;
+}
+
+.mes em {
+    color: #666;
+    font-style: normal;
+}
+/* ===== EXÁMENES ===== */
+
+.mes li.examen {
+    background: #fff4f4;
+    border-left: 5px solid #d62828;
+    padding: 14px 16px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.mes li.examen strong {
+    color: #d62828;
+    font-size: 17px;
+}
+
+.mes li.examen span {
+    font-weight: 700;
+    color: #b00020;
+}
+
 /* Reset básico */
 * {
     box-sizing: border-box;
