@@ -103,10 +103,15 @@ body, html {
 }
 
 /* Logo */
-
-.nav-logo img {
+.logo-fain {
     height: 65px;
 }
+
+.logo-iapg {
+    height: 55px;   /* más chico que FaIn */
+    margin-left: 15px; /* separa un poco los logos */
+}
+
 
 /* Menú */
 .nav-menu {
