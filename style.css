@@ -285,7 +285,7 @@ body, html {
 @media (max-width: 768px) {
 
     .titulo-hero {
-        min-height: 260px;
+        min-height: 400px;
     }
 
     .titulo-hero h1 {
@@ -813,6 +813,89 @@ body, html {
     margin-bottom: 18px;
 }
 
+/* ===== SEDE ===== */
+
+.sede-section {
+    padding: 80px 20px;
+    background: #f4f7fb;
+}
+
+.sede-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Texto */
+.sede-info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.sede-info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #0b5ed7; /* azul institucional */
+}
+
+.sede-info p {
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.direccion {
+    font-weight: 500;
+    color: #1d3557;
+}
+
+/* Botón */
+.btn-mapa {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    background: #0b5ed7;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.btn-mapa:hover {
+    background: #084298;
+}
+
+/* Mapa más chico */
+.sede-mapa {
+    flex: 1;
+    min-width: 280px;
+}
+
+.sede-mapa iframe {
+    width: 100%;
+    height: 260px;  /* ⬅️ MÁS CHICO */
+    border: 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .sede-container {
+        flex-direction: column;
+    }
+
+    .sede-mapa iframe {
+        height: 220px;
+    }
+}
+
 
 
 
@@ -953,9 +1036,8 @@ h1 {
 
 /* SECCIÓN EVALUACIÓN */
 .evaluacion {
-    margin-top: 80px;
+    margin-top: 50px;
     padding: 60px 20px;
-    background: #ffffff;
 }
 
 .evaluacion h2 {
@@ -976,7 +1058,7 @@ h1 {
 
 /* Tarjetas */
 .eval-card {
-    background: #f7f9fc;
+    background: white;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 14px rgba(0,0,0,0.08);
@@ -1126,7 +1208,7 @@ h1 {
 
 /* MODALIDAD DE DICTADO */
 .modalidad-programa {
-    margin: 0px auto;
+    margin: 30px auto;
     padding: 80px 20px;
     background: #f5f6fa; /* gris suave */
 }
