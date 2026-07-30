@@ -108,8 +108,9 @@ body, html {
 }
 
 .logo-iapg {
-    height: 55px;   /* más chico que FaIn */
+    height: 40px;   /* más chico que FaIn */
     margin-left: 15px; /* separa un poco los logos */
+     transform: translateY(-10px);
 }
 
 
@@ -1210,12 +1211,13 @@ h1 {
 
 /* Contenedor */
 .eval-container {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
+
 
 /* Tarjetas */
 .eval-card {
@@ -1314,13 +1316,6 @@ h1 {
     transform: translateY(-2px);
 }
 
-
-/* La tarjeta destacada ocupa toda la fila */
-.eval-card.destacado {
-    grid-column: 1 / -1; /* ocupa todas las columnas */
-    padding: 35px;
-    font-size: 16px;
-}
 
 .bibliografia {
     max-width: 1000px;
@@ -1421,6 +1416,8 @@ h1 {
 
 /* ===== CRONOGRAMA ===== */
 
+/* ===== CRONOGRAMA ===== */
+
 .cronograma {
     padding: 80px 20px;
     max-width: 1000px;
@@ -1439,6 +1436,7 @@ h1 {
 }
 
 /* Lista */
+
 .mes ul {
     list-style: none;
     padding: 0;
@@ -1446,8 +1444,9 @@ h1 {
 }
 
 /* Cada fila */
+
 .mes li {
-    display: flex;                 /* 👈 CLAVE */
+    display: flex;
     align-items: flex-start;
     gap: 25px;
     padding: 18px 20px;
@@ -1458,56 +1457,55 @@ h1 {
     line-height: 1.6;
 }
 
-/* Fecha */
-.mes li span {
-    min-width: 80px;               /* 👈 ancho fijo */
-    font-weight: 600;
-    color: #0052cc;
-    font-size: 16px;
+/* FECHA + HORARIO */
+
+.fecha{
+    min-width:120px;
+    font-weight:600;
+    color:#0052cc;
 }
 
-/* Texto */
-.mes li:not(.examen) {
-    font-size: 16px;
-    color: #333;
+.dia{
+    display:block;
+    font-size:16px;
 }
 
-/* ===== EXÁMENES (más relevantes) ===== */
+.hora{
+    display:block;
+    font-size:14px;
+}
+
+/* TEXTO */
+
+.detalle{
+    flex:1;
+    font-size:16px;
+    color:#333;
+}
+
+/* ===== EXÁMENES ===== */
 
 .mes li.examen {
     border-left: 6px solid #d32f2f;
     background: #fff5f5;
 }
 
-.mes li.examen span {
+.mes li.examen .dia,
+.mes li.examen .hora {
     color: #d32f2f;
 }
 
 .mes li.examen strong {
     font-size: 16px;
     text-transform: uppercase;
+    color:#d62828;
 }
 
-/* ===== EXÁMENES ===== */
-
-.mes li.examen {
-    background: #fff4f4;
-    border-left: 5px solid #d62828;
-    padding: 14px 16px;
-    margin: 10px 0;
-    border-radius: 8px;
+.mes li:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 22px rgba(0,0,0,0.12);
+transition:0.2s;
 }
-
-.mes li.examen strong {
-    color: #d62828;
-    font-size: 17px;
-}
-
-.mes li.examen span {
-    font-weight: 700;
-    color: #b00020;
-}
-
 /* Reset básico */
 * {
     box-sizing: border-box;
@@ -1741,6 +1739,24 @@ h1 {
     font-size: 14px;
     color: #cbd5f5;
 }
+
+.linkedin a{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.linkedin a:hover{
+    color: white; /* color LinkedIn */
+}
+
+.linkedin i{
+    font-size: 28px;
+}
 @media (max-width: 768px) {
 
     .footer-container {
@@ -1769,4 +1785,239 @@ h1 {
     .footer-col:nth-child(3) {
         order: 3; /* contacto */
     }
+}
+
+.form-inscripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 500px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.form-inscripcion input,
+.form-inscripcion select,
+.form-inscripcion textarea {
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+
+.form-inscripcion input:focus,
+.form-inscripcion select:focus,
+.form-inscripcion textarea:focus {
+    outline: none;
+    border-color: #0052cc;
+}
+
+.form-inscripcion button {
+    align-self: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#mensajeEnvio {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.fila-doble {
+    display: flex;
+    gap: 12px;
+}
+.fila-doble select,
+.fila-doble input {
+    flex: 1;
+}
+
+.fieldset-check,
+.fieldset-facturacion {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 16px 18px;
+}
+
+.fieldset-check legend,
+.fieldset-facturacion legend {
+    font-weight: 600;
+    color: #0052cc;
+    padding: 0 8px;
+}
+
+.fieldset-check label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #333;
+}
+
+.fieldset-check input[type="text"] {
+    margin-top: 8px;
+}
+
+.fieldset-facturacion input,
+.fieldset-facturacion select {
+    margin-bottom: 12px;
+}
+
+.fieldset-facturacion input:last-child {
+    margin-bottom: 0;
+}
+
+.label-campo {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: -8px;
+}
+
+/* Excluir checkboxes del estilo general de inputs */
+.form-inscripcion input[type="checkbox"] {
+    width: auto;
+    padding: 0;
+    border: none;
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+}
+
+.fieldset-check label {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+/* Input de archivo personalizado */
+.input-archivo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px dashed #ccc;
+    border-radius: 12px;
+    padding: 14px 18px;
+}
+
+.input-archivo-wrapper input[type="file"] {
+    display: none;
+}
+
+.btn-archivo {
+    background: #0052cc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.btn-archivo:hover {
+    background: #333;
+}
+
+.nombre-archivo {
+    font-size: 14px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@media (max-width: 500px) {
+    .fila-doble {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .input-archivo-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .nombre-archivo {
+        width: 100%;
+        white-space: normal;
+    }
+
+    .form-inscripcion input,
+    .form-inscripcion select,
+    .form-inscripcion textarea {
+        padding: 12px 14px;
+        font-size: 15px;
+    }
+}
+
+.descargas {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 25px 0 35px;
+}
+
+.btn-descarga {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f0f4ff;
+    color: #0052cc;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-descarga:hover {
+    background: #0052cc;
+    color: white;
+}
+
+.caja-info-pago {
+    background: #f7f9fc;
+    border-radius: 16px;
+    padding: 30px 35px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.caja-info-pago h3 {
+    font-size: 18px;
+    color: #0052cc;
+    margin: 20px 0 10px;
+}
+
+.caja-info-pago h3:first-child {
+    margin-top: 0;
+}
+
+.caja-info-pago ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.caja-info-pago li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.aviso-comprobante {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.aviso-calendario {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin: -20px 0 30px;
 }

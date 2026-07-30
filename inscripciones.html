@@ -6,6 +6,7 @@
     <title>Diplomatura Integridad y Corrosión</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -23,6 +24,7 @@
             <nav class="nav-menu" id="navMenu">
                 <a href="inicio.html">Inicio</a>
                 <a href="programa.html">Plan de estudio</a>
+                <a href="cronograma.html">Cronograma</a>
                 <a href="docentes.html">Docentes</a>
                 <a href="inscripciones.html">Inscripción</a>
                 <a href="contacto.html">Contacto</a>
@@ -39,22 +41,135 @@
         <div class="inscripcion-contenedor">
             <h1>Inscribite ahora</h1>
 
-            <p class="inscripcion-texto">
-                Completá el formulario de inscripción para participar de la 
-                <strong>Diplomatura en Integridad y Corrosión</strong>.
-                Una vez enviado, el equipo organizador se contactará para brindarte
-                más información sobre el cursado y los pasos a seguir.
-            </p>
+        <p class="inscripcion-texto">
+    Agradecemos su interés por la Diplomatura en Integridad y Corrosión de la UNCo-IAPG.
+    A continuación le solicitamos que complete el formulario de Inscripción, en donde se le
+    solicitarán datos personales y de contacto, datos profesionales, datos de facturación
+    y se le facilitará la información para el pago.
+</p>
 
-            <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSemLYGF0oztAY8da7vL2vHspw5DH-us4VOXwZ_lE0ncTdIwhA/viewform"
-                target="_blank"
-                class="btn-inscripcion">
-                Ir al formulario de inscripción
-            </a>
+<div class="descargas">
+    <a href="https://drive.google.com/file/d/1v-qSJafS85kjiNyWAXKjXKVEQo7BOF-n/view?usp=drive_link" target="_blank" class="btn-descarga">
+        <i class="fa-solid fa-file-arrow-down"></i> Programa 2026
+    </a>
+</div>
+<p class="aviso-calendario">
+    <i class="fa-solid fa-circle-info"></i> El calendario estará disponible dentro de los próximos meses.
+</p>
+
+<div class="caja-info-pago">
+    <h3>Costo (Pago por transferencia)</h3>
+    <ul>
+        <li>Un pago: $2.500.000,00 AR$</li>
+        <li>Financiado: 3 cuotas de $1.000.000,00 AR$</li>
+    </ul>
+
+    <h3>Datos para la transferencia</h3>
+    <ul>
+        <li>Banco Credicoop Coop Ltdo</li>
+        <li>Cuenta Corriente Nº 191-093-020781/2</li>
+        <li>CBU Nº 1910093355009302078128</li>
+        <li>Titular: UNC-Ingeniería</li>
+        <li>CUIT: 30-58676219-9</li>
+        <li>Email de aviso: dic.fain.unco@gmail.com; matiaslopez.fain@gmail.com</li>
+        <li>
+            Se aceptan pagos a través de Mercado Pago (con tarjeta vinculada) utilizando el
+            alias <strong>UNCO.FAIN.2017</strong>. En el concepto/asunto del pago, por favor
+            indicar <strong>"InscripcionDIC2027"</strong>.
+        </li>
+    </ul>
+
+    <h3>Requisitos</h3>
+    <ul>
+        <li>Secundario Completo</li>
+        <li>Mayor de 18 años</li>
+    </ul>
+
+    <p class="aviso-comprobante">
+        Para finalizar la inscripción deberá adjuntar el comprobante de pago con el
+        siguiente nombre de archivo: <strong>"Apellido_Nombre_UnPago-Financiado_Empresa"</strong>
+    </p>
+</div>
+
+            <form id="formInscripcion" class="form-inscripcion">
+
+        <form id="formInscripcion" class="form-inscripcion">
+
+    <input type="email" name="email" placeholder="Email" required>
+
+    <div class="fila-doble">
+        <select name="tipoDocumento" required>
+            <option value="" disabled selected>Tipo de documento</option>
+            <option value="DNI">DNI</option>
+            <option value="Pasaporte">Pasaporte</option>
+            <option value="LC">LC</option>
+            <option value="LE">LE</option>
+            <option value="Otro">Otro</option>
+        </select>
+        <input type="text" name="nroDocumento" placeholder="Número de documento" required>
+    </div>
+
+    <input type="text" name="apellidoNombre" placeholder="Apellido y Nombre" required>
+
+    <label class="label-campo">Fecha de nacimiento</label>
+    <input type="date" name="fechaNacimiento" required>
+
+    <input type="tel" name="telefono" placeholder="Teléfono" required>
+
+    <input type="text" name="empresa" placeholder="Empresa" required>
+
+    <input type="text" name="sector" placeholder="Sector en el que se desempeña">
+
+    <input type="text" name="funcion" placeholder="Función en la empresa">
+
+    <select name="nivelEstudio" required>
+        <option value="" disabled selected>Nivel de estudio</option>
+        <option value="Secundario">Secundario</option>
+        <option value="Terciario">Terciario</option>
+        <option value="Universitario en curso">Universitario en curso</option>
+        <option value="Universitario completo">Universitario completo</option>
+        <option value="Posgrado">Posgrado</option>
+    </select>
+
+    <fieldset class="fieldset-check">
+        <legend>Restricción alimentaria</legend>
+        <label><input type="checkbox" name="restriccion" value="Celíaco"> Celíaco</label>
+        <label><input type="checkbox" name="restriccion" value="Vegano"> Vegano</label>
+        <label><input type="checkbox" name="restriccion" value="Vegetariano"> Vegetariano</label>
+        <label><input type="checkbox" name="restriccion" value="Intolerante a la lactosa"> Intolerante a la lactosa</label>
+        <input type="text" name="restriccionOtro" placeholder="Otro (especificar)">
+    </fieldset>
+
+    <fieldset class="fieldset-facturacion">
+        <legend>Datos de facturación</legend>
+        <input type="text" name="cuit" placeholder="CUIT/CUIL">
+        <input type="text" name="razonSocial" placeholder="Razón social">
+        <select name="condicionIva">
+            <option value="" disabled selected>Condición frente al IVA</option>
+            <option value="Responsable Inscripto">Responsable Inscripto</option>
+            <option value="Monotributista">Monotributista</option>
+            <option value="Exento">Exento</option>
+            <option value="Consumidor Final">Consumidor Final</option>
+        </select>
+        <input type="email" name="emailFactura" placeholder="Email para envío de factura">
+    </fieldset>
+
+    <label class="label-campo">Adjuntar comprobante de pago</label>
+<div class="input-archivo-wrapper">
+    <label for="comprobante" class="btn-archivo">Elegir archivo</label>
+    <input type="file" id="comprobante" name="comprobante" accept=".pdf,.jpg,.jpeg,.png" onchange="document.getElementById('nombreArchivo').textContent = this.files[0] ? this.files[0].name : 'Ningún archivo seleccionado'">
+    <span id="nombreArchivo" class="nombre-archivo">Ningún archivo seleccionado</span>
+</div>
+    
+
+    <textarea name="comentarios" placeholder="Comentarios (opcional)" rows="3"></textarea>
+
+    <button type="submit" class="btn-inscripcion">Enviar inscripción</button>
+    <p id="mensajeEnvio"></p>
+</form>
 
             <div class="info-extra">
-                <p><strong>Modalidad:</strong> Mixta (presencial y virtual)</p>
+                <p><strong>Modalidad:</strong> Clases presenciales y clases virtuales</p>
                 <p><strong>Carga horaria total:</strong> 180 horas</p>
                 <p><strong>Requisito:</strong> Ser mayor de 18 años</p>
                 <p><strong>Cupos:</strong> Limitados</p>
@@ -80,6 +195,7 @@
             <h4>Contacto</h4>
             <p>
                 <a href="mailto:dic.fain.unco@gmail.com">dic.fain.unco@gmail.com</a>
+                <a href="mailto:dic@fain.uncoma.edu.ar">dic@fain.uncoma.edu.ar</a>
             </p>
             <p>
                 <a href="mailto:cefesteim@gmail.com">cefesteim@gmail.com</a>
@@ -89,6 +205,11 @@
                 <a href="mailto:poliserpi@gmail.com">poliserpi@gmail.com</a>
                 <a href="mailto:mariana.poliserpi@fain.uncoma.edu.ar">mariana.poliserpi@fain.uncoma.edu.ar</a>
             </p>
+            <p class="linkedin">
+                <a href="https://www.linkedin.com/in/diplomatura-corrosión-e-integridad-1307ab3b4" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> 
+                </a>
+            </p>
         </div>
 
     </div>
@@ -97,6 +218,83 @@
         <p>© 2025 Facultad de Ingeniería · Universidad Nacional del Comahue</p>
     </div>
 </footer>
+<script>
+document.getElementById('formInscripcion').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const boton = form.querySelector('button');
+    const mensaje = document.getElementById('mensajeEnvio');
+
+    const restricciones = Array.from(form.querySelectorAll('input[name="restriccion"]:checked'))
+        .map(cb => cb.value);
+    if (form.restriccionOtro.value.trim() !== "") {
+        restricciones.push("Otro: " + form.restriccionOtro.value.trim());
+    }
+
+    const archivo = form.comprobante.files[0];
+
+    boton.disabled = true;
+    boton.textContent = "Enviando...";
+
+    function enviarDatos(comprobanteData) {
+        const data = {
+            email: form.email.value,
+            tipoDocumento: form.tipoDocumento.value,
+            nroDocumento: form.nroDocumento.value,
+            apellidoNombre: form.apellidoNombre.value,
+            fechaNacimiento: form.fechaNacimiento.value,
+            telefono: form.telefono.value,
+            empresa: form.empresa.value,
+            sector: form.sector.value,
+            funcion: form.funcion.value,
+            nivelEstudio: form.nivelEstudio.value,
+            restriccionAlimentaria: restricciones.join(", "),
+            cuit: form.cuit.value,
+            razonSocial: form.razonSocial.value,
+            condicionIva: form.condicionIva.value,
+            emailFactura: form.emailFactura.value,
+            comprobante: comprobanteData,
+            comentarios: form.comentarios.value
+        };
+
+        fetch("https://script.google.com/macros/s/AKfycbx-GyGxZ2t0GupraxrPqqOff3u6U6K801w6S-Jt0gkICcwRUtL1S4U67oMaKNzNpUCA/exec", {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        })
+        .then(() => {
+            mensaje.textContent = "¡Inscripción enviada con éxito! Nos contactaremos a la brevedad.";
+            mensaje.style.color = "#0052cc";
+            form.reset();
+            boton.textContent = "Enviar inscripción";
+            boton.disabled = false;
+        })
+        .catch(() => {
+            mensaje.textContent = "Hubo un error al enviar. Probá de nuevo o escribinos por mail.";
+            mensaje.style.color = "#d32f2f";
+            boton.textContent = "Enviar inscripción";
+            boton.disabled = false;
+        });
+    }
+
+    if (archivo) {
+        const reader = new FileReader();
+        reader.onload = function() {
+            const base64 = reader.result.split(',')[1];
+            enviarDatos({
+                nombre: archivo.name,
+                tipo: archivo.type,
+                contenido: base64
+            });
+        };
+        reader.readAsDataURL(archivo);
+    } else {
+        enviarDatos(null);
+    }
+});
+</script>
 <script src="nav.js"></script>
 </body>
 </html>
