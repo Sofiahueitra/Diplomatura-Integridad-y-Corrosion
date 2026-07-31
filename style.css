@@ -2021,3 +2021,19 @@ transition:0.2s;
     color: #666;
     margin: -20px 0 30px;
 }
+
+.inscripcion-subtitulo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1d1d1d;
+    margin-bottom: 15px;
+}
+
+.inscripcion-lista {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto 20px;
+    font-size: 17px;
+    color: #444;
+    line-height: 1.8;
+}

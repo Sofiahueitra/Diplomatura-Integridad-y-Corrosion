@@ -41,13 +41,19 @@
         <div class="inscripcion-contenedor">
             <h1>Inscribite ahora</h1>
 
-        <p class="inscripcion-texto">
-    Agradecemos su interés por la Diplomatura en Integridad y Corrosión de la UNCo-IAPG.
-    A continuación le solicitamos que complete el formulario de Inscripción, en donde se le
-    solicitarán datos personales y de contacto, datos profesionales, datos de facturación
-    y se le facilitará la información para el pago.
+        <h2 class="inscripcion-subtitulo">Bienvenido/a a la Diplomatura en Integridad y Corrosión 2027 – UNCo‑IAPG</h2>
+<p class="inscripcion-texto">
+    Agradecemos su interés en participar de esta propuesta académica.
+    Para completar su inscripción, deberá llenar el formulario con:
 </p>
-
+<ul class="inscripcion-lista">
+    <li>Datos personales y de contacto</li>
+    <li>Información profesional</li>
+    <li>Datos de facturación</li>
+</ul>
+<p class="inscripcion-texto">
+    A continuación, se le brindará la información necesaria para realizar el pago correspondiente.
+</p>
 <div class="descargas">
     <a href="https://drive.google.com/file/d/1v-qSJafS85kjiNyWAXKjXKVEQo7BOF-n/view?usp=drive_link" target="_blank" class="btn-descarga">
         <i class="fa-solid fa-file-arrow-down"></i> Programa 2026
@@ -91,8 +97,6 @@
     </p>
 </div>
 
-            <form id="formInscripcion" class="form-inscripcion">
-
         <form id="formInscripcion" class="form-inscripcion">
 
     <input type="email" name="email" placeholder="Email" required>
@@ -109,7 +113,10 @@
         <input type="text" name="nroDocumento" placeholder="Número de documento" required>
     </div>
 
-    <input type="text" name="apellidoNombre" placeholder="Apellido y Nombre" required>
+    <div class="fila-doble">
+    <input type="text" name="apellido" placeholder="Apellido" required>
+    <input type="text" name="nombre" placeholder="Nombre" required>
+</div>
 
     <label class="label-campo">Fecha de nacimiento</label>
     <input type="date" name="fechaNacimiento" required>
@@ -141,23 +148,23 @@
     </fieldset>
 
     <fieldset class="fieldset-facturacion">
-        <legend>Datos de facturación</legend>
-        <input type="text" name="cuit" placeholder="CUIT/CUIL">
-        <input type="text" name="razonSocial" placeholder="Razón social">
-        <select name="condicionIva">
-            <option value="" disabled selected>Condición frente al IVA</option>
-            <option value="Responsable Inscripto">Responsable Inscripto</option>
-            <option value="Monotributista">Monotributista</option>
-            <option value="Exento">Exento</option>
-            <option value="Consumidor Final">Consumidor Final</option>
-        </select>
-        <input type="email" name="emailFactura" placeholder="Email para envío de factura">
-    </fieldset>
+    <legend>Datos de facturación</legend>
+    <input type="text" name="cuit" placeholder="CUIT/CUIL" required>
+    <input type="text" name="razonSocial" placeholder="Razón social" required>
+    <select name="condicionIva" required>
+        <option value="" disabled selected>Condición frente al IVA</option>
+        <option value="Responsable Inscripto">Responsable Inscripto</option>
+        <option value="Monotributista">Monotributista</option>
+        <option value="Exento">Exento</option>
+        <option value="Consumidor Final">Consumidor Final</option>
+    </select>
+    <input type="email" name="emailFactura" placeholder="Email para envío de factura" required>
+</fieldset>
 
     <label class="label-campo">Adjuntar comprobante de pago</label>
 <div class="input-archivo-wrapper">
     <label for="comprobante" class="btn-archivo">Elegir archivo</label>
-    <input type="file" id="comprobante" name="comprobante" accept=".pdf,.jpg,.jpeg,.png" onchange="document.getElementById('nombreArchivo').textContent = this.files[0] ? this.files[0].name : 'Ningún archivo seleccionado'">
+    <input type="file" id="comprobante" name="comprobante" accept=".pdf,.jpg,.jpeg,.png" required onchange="document.getElementById('nombreArchivo').textContent = this.files[0] ? this.files[0].name : 'Ningún archivo seleccionado'">
     <span id="nombreArchivo" class="nombre-archivo">Ningún archivo seleccionado</span>
 </div>
     
@@ -242,7 +249,8 @@ document.getElementById('formInscripcion').addEventListener('submit', function(e
             email: form.email.value,
             tipoDocumento: form.tipoDocumento.value,
             nroDocumento: form.nroDocumento.value,
-            apellidoNombre: form.apellidoNombre.value,
+            apellido: form.apellido.value,
+            nombre: form.nombre.value,
             fechaNacimiento: form.fechaNacimiento.value,
             telefono: form.telefono.value,
             empresa: form.empresa.value,
@@ -258,7 +266,7 @@ document.getElementById('formInscripcion').addEventListener('submit', function(e
             comentarios: form.comentarios.value
         };
 
-        fetch("https://script.google.com/macros/s/AKfycbx-GyGxZ2t0GupraxrPqqOff3u6U6K801w6S-Jt0gkICcwRUtL1S4U67oMaKNzNpUCA/exec", {
+        fetch("https://script.google.com/macros/s/AKfycbxHQZ2zHpvLQDCe4Yxr32LcGRzOMtwTnFeuUPVaIA7lmQsRueaco6FJ4Bro_RrBYmYZ/exec", {
             method: "POST",
             mode: "no-cors",
             headers: { "Content-Type": "application/json" },
